@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Contacto | Recreo Bazar</title>
+
+    <link rel="stylesheet" href="../css/grid12.css">
+    <link rel="stylesheet" href="../css/template.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="pagina">
+
+        <header id="cabecera">
+            <div class="fila">
+
+                <div class="col4">
+                    <a class="logo" href="index.html">
+                        Bop-Pop Bazar
+                    </a>
+                </div>
+
+                <nav id="menu" class="col8">
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="../mexico/index.html">México</a></li>
+                        <li><a href="../estados unidos/index.html">Estados Unidos</a></li>
+                        <li><a href="../japon/index.html">Japón</a></li>
+                        <li><a href="../contacto/index.html">Contacto</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </header>
+
+        <main id="contacto" class="catalogo">
+
+            <p class="etiqueta">Hablemos de tu próxima colección</p>
+            <h1>El juego sigue contigo.</h1>
+
+            <p class="introduccion-catalogo">
+                ¿Te interesa una pieza o buscas un juguete especial?
+                Cuéntanos qué tienes en mente.
+            </p>
+
+            <div class="fila">
+
+                <div class="col4">
+                    <aside class="info-contacto">
+
+                        <h2>Cada juguete tiene una historia.</h2>
+
+                        <p>
+                            Explora nuestras colecciones de México,
+                            Estados Unidos y Japón para encontrar
+                            tu próximo tesoro.
+                        </p>
+
+                        <h3>¿Preguntas por una pieza?</h3>
+
+                        <p>
+                            Incluye el nombre del juguete y su
+                            categoría para identificarlo fácilmente.
+                        </p>
+
+                        <h3>¿Buscas algo especial?</h3>
+
+                        <p>
+                            Describe el personaje, la marca o la
+                            época que te interesa coleccionar.
+                        </p>
+
+                        <a class="enlace" href="index.html">
+                            Volver al inicio →
+                        </a>
+
+                    </aside>
+                </div>
+
+                <div class="col8">
+
+                    <form id="formulario-contacto">
+
+                        <fieldset>
+                            <legend>Escríbenos</legend>
+
+                            <p>
+                                Los campos con * son obligatorios.
+                            </p>
+
+                            <label for="nombre">Nombre *</label>
+                            <input
+                                type="text"
+                                id="nombre"
+                                name="nombre"
+                                autocomplete="name"
+                                placeholder="Tu nombre"
+                                required
+                            >
+
+                            <label for="correo">Correo electrónico *</label>
+                            <input
+                                type="email"
+                                id="correo"
+                                name="correo"
+                                autocomplete="email"
+                                placeholder="tu@correo.com"
+                                required
+                            >
+
+                            <label for="categoria">Categoría de interés</label>
+                            <select id="categoria" name="categoria">
+                                <option value="">Selecciona una opción</option>
+                                <option value="mexico">México</option>
+                                <option value="estados-unidos">Estados Unidos</option>
+                                <option value="japon">Japón</option>
+                                <option value="general">Consulta general</option>
+                            </select>
+
+                            <label for="juguete">Nombre del juguete</label>
+                            <input
+                                type="text"
+                                id="juguete"
+                                name="juguete"
+                                placeholder="Por ejemplo: Tazos Pokémon Sabritas"
+                            >
+
+                            <label for="mensaje">Mensaje *</label>
+                            <textarea
+                                id="mensaje"
+                                name="mensaje"
+                                rows="6"
+                                placeholder="Cuéntanos qué estás buscando..."
+                                required
+                            ></textarea>
+
+                            <p class="nota-formulario">
+                                Formulario de demostración para un proyecto
+                                escolar. No envía ni guarda información.
+                            </p>
+
+                            <button type="submit" class="boton">
+                                Probar formulario
+                            </button>
+
+                            <p id="respuesta-formulario" role="status"></p>
+
+                        </fieldset>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </main>
+
+        <footer id="pie">
+            <p><strong>RECREO BAZAR</strong></p>
+            <p>El juego sigue.</p>
+            <p>Proyecto escolar de juguetes coleccionables.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const formulario = document.getElementById("formulario-contacto");
+        const respuesta = document.getElementById("respuesta-formulario");
+
+        formulario.addEventListener("submit", function(evento) {
+            evento.preventDefault();
+
+            respuesta.textContent =
+                "Los campos obligatorios están completos. Esta es una demostración; no se envió ningún mensaje.";
+        });
+    </script>
+
+</body>
+</html>
